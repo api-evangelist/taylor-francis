@@ -1,0 +1,111 @@
+specification: API Commons Rate Limits
+specificationVersion: '0.1'
+schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main/schema/api-commons.yml#/$defs/RateLimits
+provider: Taylor & Francis
+providerId: taylor-francis
+created: '2026-06-13'
+modified: '2026-06-13'
+tags:
+  - Academic
+  - Books
+  - Journals
+  - Metadata
+  - Publishing
+  - Research
+  - Text Mining
+  - Rate Limiting
+  - Quotas
+  - Throttling
+description: >-
+  Machine-readable rate limit definitions for the Taylor & Francis API surface.
+  Taylor & Francis does not publicly publish explicit per-minute rate limits for
+  its institutional APIs; the values below represent scaffold defaults derived
+  from comparable academic publisher APIs and Taylor & Francis TDM guidance.
+  Replace with confirmed limits obtained from Taylor & Francis support or your
+  institutional account manager.
+headers:
+  limit: X-RateLimit-Limit
+  remaining: X-RateLimit-Remaining
+  reset: X-RateLimit-Reset
+  retryAfter: Retry-After
+  policy: RateLimit-Policy
+responseCodes:
+  throttled: 429
+  quotaExceeded: 429
+  serviceUnavailable: 503
+limits:
+  - tier: institutional
+    name: Institutional Subscriber Default
+    scope: api-key
+    metric: requests_per_minute
+    limit: 60
+    burst: 120
+    timeFrame: minute
+    applies:
+      - Taylor & Francis Content API
+      - Taylor & Francis KBART Holdings API
+      - Taylor & Francis SUSHI / COUNTER 5 API
+  - tier: institutional
+    name: Institutional Monthly Quota
+    scope: api-key
+    metric: requests_per_month
+    limit: 10000
+    timeFrame: month
+    applies:
+      - Taylor & Francis Content API
+      - Taylor & Francis KBART Holdings API
+      - Taylor & Francis SUSHI / COUNTER 5 API
+  - tier: tdm
+    name: TDM Access Default
+    scope: api-key
+    metric: requests_per_minute
+    limit: 30
+    burst: 60
+    timeFrame: minute
+    applies:
+      - Taylor & Francis Text and Data Mining API
+  - tier: tdm
+    name: TDM Monthly Quota
+    scope: api-key
+    metric: requests_per_month
+    limit: 50000
+    timeFrame: month
+    applies:
+      - Taylor & Francis Text and Data Mining API
+  - tier: enterprise
+    name: Enterprise Negotiated Limit
+    scope: contract
+    metric: requests_per_minute
+    limit: 500
+    burst: 1000
+    timeFrame: minute
+    applies:
+      - Taylor & Francis Content API
+      - Taylor & Francis KBART Holdings API
+      - Taylor & Francis SUSHI / COUNTER 5 API
+      - Taylor & Francis Text and Data Mining API
+policies:
+  - name: Backoff Strategy
+    description: >-
+      Clients should implement exponential backoff with jitter, honoring the
+      Retry-After header when present after a 429 response.
+  - name: Burst Handling
+    description: >-
+      Short bursts above the steady-state limit are tolerated up to the
+      documented burst ceiling before throttling engages.
+  - name: Quota Reset
+    description: >-
+      Monthly quotas reset at the start of each calendar month in UTC.
+      Per-minute windows reset on a sliding-window basis.
+  - name: Fair Use
+    description: >-
+      Even on uncapped enterprise tiers, sustained usage that materially impacts
+      shared infrastructure may be subject to fair-use throttling.
+  - name: TDM Pre-Notification
+    description: >-
+      Institutions must notify Taylor & Francis in writing at
+      support@tandfonline.com before commencing text and data mining activities
+      to ensure appropriate technical assistance and rate-limit coordination.
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com

@@ -1,0 +1,184 @@
+specification: FinOps Framework
+specificationVersion: '1.0'
+alignedWith:
+  framework: FinOps Foundation Framework
+  frameworkUrl: https://www.finops.org/framework/
+  dataSpec: FOCUS
+  dataSpecVersion: '1.3'
+  dataSpecUrl: https://focus.finops.org/focus-specification/v1-3/
+provider: Taylor & Francis
+providerId: taylor-francis
+publisherName: Taylor & Francis Group
+serviceCategory: API
+created: '2026-06-13'
+modified: '2026-06-13'
+tags:
+  - Academic
+  - Books
+  - Journals
+  - Publishing
+  - Research
+  - Text Mining
+  - FinOps
+  - Cost Management
+  - FOCUS
+description: >-
+  FinOps framework definition for the Taylor & Francis API surface. Provides a
+  FOCUS-aligned mapping for cost allocation, usage measurement, and
+  unit-economics reporting. Taylor & Francis API access is predominantly
+  subscription-bundled, so direct per-call billing is uncommon; primary cost
+  drivers are institutional subscription fees and negotiated commercial
+  licences.
+principles:
+  - name: Visibility
+    description: >-
+      Make API consumption costs visible to library, research, and finance teams
+      by tracking COUNTER usage data alongside subscription spend.
+  - name: Allocation
+    description: >-
+      Tag every chargeable API call with the consuming team, environment,
+      application, and research project so cost can be allocated back to
+      departments or grants.
+  - name: Optimization
+    description: >-
+      Continuously evaluate TDM request patterns, caching, batching, and licence
+      tier selection to reduce total cost of content access.
+  - name: Accountability
+    description: >-
+      Establish budget owners and chargeback or showback flows for each
+      consuming research team or library department.
+domains:
+  - name: Understand Usage and Cost
+    capabilities:
+      - Data Ingestion
+      - Allocation
+      - Reporting and Analytics
+      - Anomaly Management
+  - name: Quantify Business Value
+    capabilities:
+      - Planning and Estimating
+      - Forecasting
+      - Budgeting
+      - Benchmarking
+      - Unit Economics
+  - name: Optimize Usage and Cost
+    capabilities:
+      - Architecting for Cloud
+      - Rate Optimization
+      - Workload Optimization
+      - Cloud Sustainability
+      - Licensing and SaaS
+  - name: Manage the FinOps Practice
+    capabilities:
+      - FinOps Practice Operations
+      - FinOps Education and Enablement
+      - Invoicing and Chargeback
+      - Onboarding Workloads
+      - Intersecting Disciplines
+billingModel:
+  pricingCategory: Subscription-Based
+  billingFrequency: Annual
+  billingCurrency: USD
+  chargeCategories:
+    - Usage
+    - Purchase
+    - Tax
+    - Credit
+    - Adjustment
+  chargeFrequency: Recurring
+focusColumns:
+  ServiceName: Taylor & Francis
+  ServiceCategory: Developer Tools / API
+  ProviderName: Taylor & Francis Group
+  PublisherName: Taylor & Francis Group
+  InvoiceIssuerName: Taylor & Francis Group
+  PricingCategory: Subscription-Based
+  PricingUnit: request
+  BillingCurrency: USD
+  ChargeCategory: Usage
+meters:
+  - name: api_requests
+    description: Count of billable API requests across all Taylor & Francis endpoints
+    unit: request
+    aggregation: sum
+    dimensions:
+      - api
+      - endpoint
+      - tier
+      - region
+      - consumer
+  - name: data_egress
+    description: Bytes returned in API responses (content downloads)
+    unit: GB
+    aggregation: sum
+    dimensions:
+      - api
+      - region
+      - consumer
+  - name: kbart_syncs
+    description: Number of KBART holdings file syncs triggered via the automation API
+    unit: sync
+    aggregation: sum
+    dimensions:
+      - institution
+      - lms_provider
+  - name: sushi_harvests
+    description: Number of COUNTER 5 SUSHI report harvest requests
+    unit: harvest
+    aggregation: sum
+    dimensions:
+      - institution
+      - report_type
+apis:
+  - name: Taylor & Francis Content API
+    baseURL: https://api.taylorfrancis.com
+    tags:
+      - Books
+      - Chapters
+      - Content
+      - DOI
+      - Downloads
+    serviceName: Taylor & Francis Content API
+    serviceCategory: API
+  - name: Taylor & Francis KBART Holdings API
+    baseURL: ''
+    tags:
+      - Automation
+      - Holdings
+      - Institutional
+      - KBART
+      - Library
+    serviceName: Taylor & Francis KBART Holdings API
+    serviceCategory: API
+  - name: Taylor & Francis SUSHI / COUNTER 5 API
+    baseURL: https://www.tandfonline.com
+    tags:
+      - COUNTER
+      - Institutional
+      - Reporting
+      - Statistics
+      - SUSHI
+    serviceName: Taylor & Francis SUSHI / COUNTER 5 API
+    serviceCategory: API
+  - name: Taylor & Francis Text and Data Mining API
+    baseURL: ''
+    tags:
+      - Content
+      - Full Text
+      - Research
+      - Text Mining
+    serviceName: Taylor & Francis Text and Data Mining API
+    serviceCategory: API
+unitEconomics:
+  - name: Cost per 1K Content Downloads
+    metric: billed_cost / (api_requests / 1000)
+    target: TBD
+  - name: Cost per Active Institution
+    metric: billed_cost / active_institutions
+    target: TBD
+  - name: Cost per KBART Sync
+    metric: subscription_cost / kbart_syncs
+    target: TBD
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
