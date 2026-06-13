@@ -1,0 +1,44 @@
+{
+  "@context": "https://schema.org",
+  "@type": "WebAPI",
+  "@id": "https://taylorandfrancis.com/our-policies/textanddatamining/",
+  "name": "Taylor & Francis Text and Data Mining API",
+  "description": "Taylor & Francis provides API-based text and data mining access to subscribed and open-access content for non-commercial research purposes. Institutions notify Taylor & Francis in advance of TDM projects and receive technical assistance to access full-text content programmatically across journals and books indexed on tandfonline.com and taylorfrancis.com.",
+  "url": "https://taylorandfrancis.com/our-policies/textanddatamining/",
+  "documentation": "https://taylorandfrancis.com/our-policies/textanddatamining/",
+  "termsOfService": "https://taylorandfrancis.com/our-policies/",
+  "provider": {
+    "@type": "Organization",
+    "@id": "https://taylorandfrancis.com/",
+    "name": "Taylor & Francis Group"
+  },
+  "keywords": [
+    "Academic",
+    "Content",
+    "Full Text",
+    "Journals",
+    "Research",
+    "Text Mining"
+  ],
+  "applicationCategory": "Research Tools",
+  "operatingSystem": "Any",
+  "audience": {
+    "@type": "Audience",
+    "audienceType": "Academic Researchers",
+    "description": "Institutional researchers conducting non-commercial text and data mining projects"
+  },
+  "offers": {
+    "@type": "Offer",
+    "description": "Available for non-commercial research. Institutions must notify Taylor & Francis prior to TDM projects.",
+    "category": "Institutional Research Access"
+  },
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": {
+      "@type": "EntryPoint",
+      "urlTemplate": "https://api.taylorfrancis.com",
+      "httpMethod": "GET",
+      "encodingType": "application/json"
+    }
+  }
+}

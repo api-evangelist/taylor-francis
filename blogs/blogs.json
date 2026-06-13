@@ -1,0 +1,63 @@
+{
+  "aid": "taylor-francis",
+  "name": "Taylor & Francis",
+  "description": "Blog and news content pulled from Taylor & Francis public channels covering API and developer resources.",
+  "url": "https://taylorandfrancis.com/",
+  "created": "2026-06-13",
+  "modified": "2026-06-13",
+  "blogs": [
+    {
+      "title": "Enhanced KBART Features for Library Management Systems",
+      "url": "https://librarianresources.taylorandfrancis.com/insights/library-management/enhanced-kbart-features/",
+      "published": "2026-01-01",
+      "description": "Taylor & Francis introduces enhanced KBART holdings automation, allowing library management systems to programmatically retrieve and synchronise institutional journal and eBook entitlements using a Customer Reference Number (CRN) token from the Librarian Dashboard.",
+      "tags": [
+        "KBART",
+        "Library",
+        "Holdings",
+        "Automation",
+        "eBooks"
+      ]
+    },
+    {
+      "title": "COUNTER 5 SUSHI Usage Statistics Harvesting",
+      "url": "https://www.tandfonline.com/page/librarians/usage",
+      "published": "2026-01-01",
+      "description": "Taylor & Francis Online supports automated harvesting of COUNTER Release 5 usage statistics via the SUSHI protocol, providing institutional libraries with Title, Database, Platform, and Item master reports through a COUNTER-compliant REST API.",
+      "tags": [
+        "COUNTER",
+        "SUSHI",
+        "Usage",
+        "Statistics",
+        "Library"
+      ]
+    },
+    {
+      "title": "Text and Data Mining API Access for Researchers",
+      "url": "https://taylorandfrancis.com/our-policies/textanddatamining/",
+      "published": "2026-01-01",
+      "description": "Taylor & Francis provides API-based text and data mining access to subscribed and open-access content for non-commercial research purposes, supporting institutions conducting TDM projects across journals and books on tandfonline.com and taylorfrancis.com.",
+      "tags": [
+        "Text Mining",
+        "Research",
+        "Academic",
+        "Full Text",
+        "Journals"
+      ]
+    },
+    {
+      "title": "Content API for eBook and Chapter Downloads",
+      "url": "https://www.taylorfrancis.com/",
+      "published": "2026-01-01",
+      "description": "The Taylor & Francis Content API enables institutional subscribers to retrieve PDF content for monographs and edited volume chapters using DOI-based identifiers, covering both subscription and open-access titles on the taylorfrancis.com platform.",
+      "tags": [
+        "Content",
+        "eBooks",
+        "DOI",
+        "Downloads",
+        "Books"
+      ]
+    }
+  ],
+  "fetched": "2026-06-13"
+}

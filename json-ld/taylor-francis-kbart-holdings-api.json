@@ -1,0 +1,39 @@
+{
+  "@context": "https://schema.org",
+  "@type": "WebAPI",
+  "@id": "https://librarianresources.taylorandfrancis.com/insights/library-management/enhanced-kbart-features/",
+  "name": "Taylor & Francis KBART Holdings API",
+  "description": "The Taylor & Francis KBART Holdings API enables library management systems to automatically retrieve and synchronise institutional journal and eBook entitlements. Librarians generate a Customer Reference Number (CRN) token from the Librarian Dashboard, which LMS providers use to pull KBART holdings files on an automated schedule.",
+  "url": "https://librarianresources.taylorandfrancis.com/insights/library-management/enhanced-kbart-features/",
+  "documentation": "https://librarianresources.taylorandfrancis.com/insights/library-management/enhanced-kbart-features/",
+  "termsOfService": "https://taylorandfrancis.com/our-policies/",
+  "provider": {
+    "@type": "Organization",
+    "@id": "https://taylorandfrancis.com/",
+    "name": "Taylor & Francis Group"
+  },
+  "keywords": [
+    "Automation",
+    "eBooks",
+    "Holdings",
+    "Institutional",
+    "KBART",
+    "Library"
+  ],
+  "applicationCategory": "Library Management",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "description": "Available to institutional library subscribers. Generate a CRN token from the Librarian Dashboard.",
+    "category": "Institutional Subscription"
+  },
+  "potentialAction": {
+    "@type": "DownloadAction",
+    "target": {
+      "@type": "EntryPoint",
+      "urlTemplate": "https://librarianresources.taylorandfrancis.com",
+      "httpMethod": "GET",
+      "encodingType": "text/tab-separated-values"
+    }
+  }
+}

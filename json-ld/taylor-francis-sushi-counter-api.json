@@ -1,0 +1,41 @@
+{
+  "@context": "https://schema.org",
+  "@type": "WebAPI",
+  "@id": "https://www.tandfonline.com/page/librarians/usage",
+  "name": "Taylor & Francis SUSHI / COUNTER 5 API",
+  "description": "Taylor & Francis Online supports automated harvesting of COUNTER Release 5 usage statistics via the SUSHI protocol. Institutional library administrators can retrieve Title, Database, Platform, and Item master reports through a COUNTER-compliant REST API using credentials generated from the T&F librarian portal.",
+  "url": "https://www.tandfonline.com/page/librarians/usage",
+  "documentation": "https://www.tandfonline.com/page/librarians/usage",
+  "termsOfService": "https://taylorandfrancis.com/our-policies/",
+  "provider": {
+    "@type": "Organization",
+    "@id": "https://taylorandfrancis.com/",
+    "name": "Taylor & Francis Group"
+  },
+  "keywords": [
+    "COUNTER",
+    "Institutional",
+    "Library",
+    "Reporting",
+    "Statistics",
+    "SUSHI",
+    "Usage"
+  ],
+  "applicationCategory": "Library Analytics",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "description": "Available to institutional library subscribers. Credentials generated from the T&F librarian portal.",
+    "category": "Institutional Subscription"
+  },
+  "sameAs": "https://registry.countermetrics.org/platform/b0d81a4b-9023-42ac-a034-703c23124cae",
+  "potentialAction": {
+    "@type": "ReadAction",
+    "target": {
+      "@type": "EntryPoint",
+      "urlTemplate": "https://www.tandfonline.com/sushi",
+      "httpMethod": "GET",
+      "encodingType": "application/json"
+    }
+  }
+}

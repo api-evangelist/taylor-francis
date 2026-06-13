@@ -1,0 +1,39 @@
+{
+  "@context": "https://schema.org",
+  "@type": "WebAPI",
+  "@id": "https://api.taylorfrancis.com",
+  "name": "Taylor & Francis Content API",
+  "description": "The Taylor & Francis Content API provides programmatic access to eBook and chapter downloads from the taylorfrancis.com platform. Using DOI-based identifiers, institutional subscribers can retrieve PDF content for monographs and edited volume chapters, including open-access titles, via the api.taylorfrancis.com domain.",
+  "url": "https://www.taylorfrancis.com/",
+  "documentation": "https://www.taylorfrancis.com/how-to-obtain-institutional-token",
+  "termsOfService": "https://taylorandfrancis.com/our-policies/",
+  "provider": {
+    "@type": "Organization",
+    "@id": "https://taylorandfrancis.com/",
+    "name": "Taylor & Francis Group"
+  },
+  "keywords": [
+    "Books",
+    "Chapters",
+    "Content",
+    "DOI",
+    "Downloads",
+    "eBooks"
+  ],
+  "applicationCategory": "Academic Publishing",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "description": "Available to institutional subscribers. Contact Taylor & Francis for access credentials.",
+    "category": "Institutional Subscription"
+  },
+  "potentialAction": {
+    "@type": "ReadAction",
+    "target": {
+      "@type": "EntryPoint",
+      "urlTemplate": "https://api.taylorfrancis.com",
+      "httpMethod": "GET",
+      "encodingType": "application/pdf"
+    }
+  }
+}

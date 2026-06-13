@@ -1,0 +1,59 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://taylorandfrancis.com/",
+  "name": "Taylor & Francis Group",
+  "description": "Taylor & Francis Group is a British academic publisher offering REST APIs for searching and accessing journal articles, books, metadata, and bibliographic records from over 2,700 Taylor & Francis and Routledge publications. Their API surfaces include content download APIs for books and chapters, KBART holdings automation for library systems, COUNTER 5 SUSHI usage reporting, and text and data mining access for institutional subscribers across humanities, social sciences, science, technology, and medicine.",
+  "url": "https://taylorandfrancis.com/",
+  "sameAs": [
+    "https://www.tandfonline.com/",
+    "https://librarianresources.taylorandfrancis.com/",
+    "https://www.linkedin.com/company/taylor-&-francis-group",
+    "https://x.com/tandfonline"
+  ],
+  "knowsAbout": [
+    "Academic Publishing",
+    "Journals",
+    "Books",
+    "Research",
+    "Text Mining",
+    "Library Management"
+  ],
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "url": "https://taylorandfrancis.com/contact/",
+    "contactType": "customer support"
+  },
+  "termsOfService": "https://taylorandfrancis.com/our-policies/",
+  "privacyPolicy": "https://taylorandfrancis.com/privacy-policy/",
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Taylor & Francis APIs",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "name": "Taylor & Francis Content API",
+        "description": "Programmatic access to eBook and chapter downloads via DOI-based identifiers for institutional subscribers.",
+        "url": "https://api.taylorfrancis.com"
+      },
+      {
+        "@type": "Offer",
+        "name": "Taylor & Francis KBART Holdings API",
+        "description": "Automated retrieval and synchronisation of institutional journal and eBook entitlements for library management systems.",
+        "url": "https://librarianresources.taylorandfrancis.com/insights/library-management/enhanced-kbart-features/"
+      },
+      {
+        "@type": "Offer",
+        "name": "Taylor & Francis SUSHI / COUNTER 5 API",
+        "description": "Automated harvesting of COUNTER Release 5 usage statistics via the SUSHI protocol for institutional libraries.",
+        "url": "https://www.tandfonline.com/page/librarians/usage"
+      },
+      {
+        "@type": "Offer",
+        "name": "Taylor & Francis Text and Data Mining API",
+        "description": "API-based text and data mining access to subscribed and open-access content for non-commercial research purposes.",
+        "url": "https://taylorandfrancis.com/our-policies/textanddatamining/"
+      }
+    ]
+  }
+}
