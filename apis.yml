@@ -115,6 +115,8 @@ apis:
       - type: Support
         url: https://www.tandfonline.com/page/librarians/usage
 common:
+  - type: DomainSecurity
+    url: security/taylor-francis-domain-security.yml
   - type: Website
     url: https://taylorandfrancis.com/
   - type: Portal
