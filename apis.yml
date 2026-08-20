@@ -54,6 +54,13 @@ apis:
       - Content
       - DOI
       - Downloads
+      - Ebooks
+    tags_raw:
+      - Books
+      - Chapters
+      - Content
+      - DOI
+      - Downloads
       - eBooks
     properties:
       - type: Documentation
@@ -70,6 +77,13 @@ apis:
       holdings files on an automated schedule.
     humanURL: https://librarianresources.taylorandfrancis.com/insights/library-management/enhanced-kbart-features/
     tags:
+      - Automation
+      - Ebooks
+      - Holdings
+      - Institutional
+      - KBART
+      - Library
+    tags_raw:
       - Automation
       - eBooks
       - Holdings
