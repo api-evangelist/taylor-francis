@@ -65,7 +65,7 @@ apis:
       - Content
       - DOI
       - Downloads
-      - Ebooks
+      - eBooks
     tags_raw:
       - Books
       - Chapters
@@ -89,7 +89,7 @@ apis:
     humanURL: https://librarianresources.taylorandfrancis.com/insights/library-management/enhanced-kbart-features/
     tags:
       - Automation
-      - Ebooks
+      - eBooks
       - Holdings
       - Institutional
       - KBART
